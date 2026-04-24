@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Flutter - Kelas 11 RPL - XI RPL</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <div class="brand">Mobile<span>Programmer</span></div>
+        <ul class="nav-links">
+            <li class="nav-item active" id="menu-home">
+                <a href="#" class="nav-link" onclick="handleNavigation('home')">
+                    <i class="fas fa-th-large"></i><span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item" id="menu-p1">
+                <a href="#" class="nav-link" onclick="handleNavigation('p1')">
+                    <i class="fas fa-layer-group"></i><span>Pertemuan 1</span>
+                </a>
+            </li>
+            <li class="nav-item" id="menu-p2">
+                <a href="#" class="nav-link" onclick="handleNavigation('p2')">
+                    <i class="fas fa-layer-group"></i><span>Pertemuan 2</span>
+                </a>
+            </li>
+            <li class="nav-item" id="menu-p3">
+                <a href="#" class="nav-link" onclick="handleNavigation('p3')">
+                    <i class="fas fa-layer-group"></i><span>Pertemuan 3</span>
+                </a>
+            </li>
+            <li class="nav-item" id="menu-p4">
+                <a href="#" class="nav-link" onclick="handleNavigation('p4')">
+                    <i class="fas fa-layer-group"></i><span>Pertemuan 4</span>
+                </a>
+            </li>
+            <li class="nav-item" id="menu-p5">
+                <a href="#" class="nav-link" onclick="handleNavigation('p5')">
+                    <i class="fas fa-layer-group"></i><span>Pertemuan 5</span>
+                </a>
+            </li><li class="nav-item" id="menu-p6">
+                <a href="#" class="nav-link" onclick="handleNavigation('p6')">
+                    <i class="fas fa-layer-group"></i><span>Pertemuan 6</span>
+                </a>
+            </li><li class="nav-item" id="menu-p7">
+                <a href="#" class="nav-link" onclick="handleNavigation('p7')">
+                    <i class="fas fa-layer-group"></i><span>Pertemuan 7</span>
+                </a>
+            </li>
+            </li>
+            <li class="nav-item" id="menu-p8">
+                <a href="#" class="nav-link" onclick="handleNavigation('p8')">
+                    <i class="fas fa-layer-group"></i><span>Pertemuan 8</span>
+                </a>
+            </li>
+            </li>
+            <li class="nav-item" id="menu-p9">
+                <a href="#" class="nav-link" onclick="handleNavigation('p9')">
+                    <i class="fas fa-layer-group"></i><span>Pertemuan 9</span>
+                </a>
+            </li>
+            </li>
+            <li class="nav-item" id="menu-p10">
+                <a href="#" class="nav-link" onclick="handleNavigation('p10')">
+                    <i class="fas fa-layer-group"></i><span>Pertemuan 10</span>
+                </a>
+            </li>
+            </li>
+            <li class="nav-item" id="menu-p11">
+                <a href="#" class="nav-link" onclick="handleNavigation('p11')">
+                    <i class="fas fa-layer-group"></i><span>Pertemuan 11</span>
+                </a>
+            </li>
+            </li>
+            <li class="nav-item" id="menu-p12">
+                <a href="#" class="nav-link" onclick="handleNavigation('p12')">
+                    <i class="fas fa-layer-group"></i><span>Pertemuan 12</span>
+                </a>
+            </li>
+            </li>
+            <li class="nav-item" id="menu-p13">
+                <a href="#" class="nav-link" onclick="handleNavigation('p13')">
+                    <i class="fas fa-layer-group"></i><span>Pertemuan 13</span>
+                </a>
+            </li>
+            </li>
+            <li class="nav-item" id="menu-p14">
+                <a href="#" class="nav-link" onclick="handleNavigation('p14')">
+                    <i class="fas fa-layer-group"></i><span>Pertemuan 14</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+
+        <section id="home" class="active-section">
+            <header>
+                <h1>Selamat Datang, Developer Masa Depan!</h1>
+                <p>Modul Pembelajaran Mobile Programming</p>
+            </header>
+
+            <div class="cards-grid">
+                <div class="module-card" onclick="handleNavigation('p1')">
+                    <div class="card-icon p1-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Pengenalan Dart & Flutter</h3>
+                    <p>Fondasi bahasa Dart dan langkah mudah instalasi SDK Flutter.</p>
+                </div>
+
+                <div class="module-card" onclick="handleNavigation('p2')">
+                    <div class="card-icon p2-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Basic Widgets & Layouting</h3>
+                    <p>Membangun UI cantik dengan Container, Row, Column, dan ListView.</p>
+                </div>
+
+                <div class="module-card" onclick="handleNavigation('p3')">
+                    <div class="card-icon p3-icon"><i class="fas fa-toggle-on"></i></div>
+                    <h3>Stateless vs Stateful</h3>
+                    <p>Memahami perbedaan widget statis dan widget dinamis.</p>
+                </div>
+
+                <div class="module-card" onclick="handleNavigation('p4')">
+                    <div class="card-icon p4-icon"><i class="fas fa-boxes"></i></div>
+                    <h3>GetX State Management</h3>
+                    <p>Manajemen state reactive yang super ringan dan praktis.</p>
+                </div>
+                <div class="module-card" onclick="handleNavigation('p5')">
+                    <div class="card-icon p5-icon"><i class="fas fa-boxes"></i></div>
+                    <h3>Studi Kasus</h3>
+                    <p>Implementasi konsep-konsep yang telah dipelajari dalam proyek nyata.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="p1">
+            <button class="btn-back" onclick="handleNavigation('home')">
+                <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+            </button>
+
+            <div class="content-card">
+                <h2>Pertemuan 1: Pengenalan</h2>
+                <h3>Topik Utama:</h3>
+                <ul>
+                    <li>Konsep Dasar Cross-Platform</li>
+                    <li>Sintaksis Dasar Dart (Variabel, Fungsi)</li>
+                    <li>Instalasi Flutter & Android Studio</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>Apa itu Flutter?</h3>
+                <p>Flutter adalah UI toolkit dari Google untuk membangun aplikasi yang dikompilasi secara native untuk
+                    mobile, web, dan desktop hanya dari satu codebase. Cepat, Ekspresif, dan Native.</p>
+            </div>
+        </section>
+
+        <section id="p2">
+            <button class="btn-back" onclick="handleNavigation('home')">
+                <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+            </button>
+            <div class="content-card">
+                <h2>Pertemuan 2: Layouting</h2>
+                <p>Semua yang Anda lihat di layar Flutter adalah Widget. Mari kita susun mereka.</p>
+
+                <pre><code>import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('Layouting')),
+        body: Center(
+          child: Container(
+            color: Colors.blue[100],
+            padding: EdgeInsets.all(20),
+            child: Text('Hello RPL'),
+          ),
+        ),
+      ),
+    );
+  }
+}</code></pre>
+            </div>
+        </section>
+
+        <section id="p3">
+            <button class="btn-back" onclick="handleNavigation('home')">
+                <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+            </button>
+            <div class="content-card">
+                <h2>Pertemuan 3: Lifecycle Widget</h2>
+                <p>Materi sedang disiapkan.</p>
+            </div>
+        </section>
+
+        <section id="p4">
+            <button class="btn-back" onclick="handleNavigation('home')">
+                <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+            </button>
+            <div class="content-card">
+                <h2>Pertemuan 4: GetX Reactive</h2>
+                <p>Materi sedang disiapkan.</p>
+            </div>
+        </section>
+
+        <section id="p5">
+            <button class="btn-back" onclick="handleNavigation('home')">
+                <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+            </button>
+            <div class="content-card">
+                <h2>Pertemuan 5: Studi Kasus</h2>
+                <p>Materi sedang disiapkan.</p>
+            </div>
+        </section>
+
+        <section id="p6">
+            <button class="btn-back" onclick="handleNavigation('home')">
+                <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+            </button>
+            <div class="content-card">
+                <h2>Pertemuan 6: Proyek Akhir</h2>
+                <p>Materi sedang disiapkan.</p>
+            </div>
+        </section>
+
+        <section id="p7">
+            <button class="btn-back" onclick="handleNavigation('home')">
+                <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+            </button>
+            <div class="content-card">
+                <h2>Pertemuan 7: Ujian Akhir</h2>
+                <p>Materi sedang disiapkan.</p>
+            </div>
+        </section>
+        <section id="p8">
+            <button class="btn-back" onclick="handleNavigation('home')">
+                <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+            </button>
+            <div class="content-card">
+                <h2>Pertemuan 8: Ujian Akhir</h2>
+                <p>Materi sedang disiapkan.</p>
+            </div>
+        </section>
+
+        <section id="p9">
+            <button class="btn-back" onclick="handleNavigation('home')">
+                <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+            </button>
+            <div class="content-card">
+                <h2>Pertemuan 9: Ujian Akhir</h2>
+                <p>Materi sedang disiapkan.</p>
+            </div>
+        </section>
+
+        <section id="p10">
+            <button class="btn-back" onclick="handleNavigation('home')">
+                <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+            </button>
+            <div class="content-card">
+                <h2>Pertemuan 10: Ujian Akhir</h2>
+                <p>Materi sedang disiapkan.</p>
+            </div>
+        </section>
+        <section id="p11">
+            <button class="btn-back" onclick="handleNavigation('home')">
+                <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+            </button>
+            <div class="content-card">
+                <h2>Pertemuan 11: Ujian Akhir</h2>
+                <p>Materi sedang disiapkan.</p>
+            </div>
+        </section>
+        <section id="p12">
+            <button class="btn-back" onclick="handleNavigation('home')">
+                <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+            </button>
+            <div class="content-card">
+                <h2>Pertemuan 12: Ujian Akhir</h2>
+                <p>Materi sedang disiapkan.</p>
+            </div>
+        </section>
+        <section id="p13">
+            <button class="btn-back" onclick="handleNavigation('home')">
+                <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+            </button>
+            <div class="content-card">
+                <h2>Pertemuan 13: Ujian Akhir</h2>
+                <p>Materi sedang disiapkan.</p>
+            </div>
+        </section>
+        <section id="p14">
+            <button class="btn-back" onclick="handleNavigation('home')">
+                <i class="fas fa-arrow-left"></i> Kembali ke Dashboard
+            </button>
+            <div class="content-card">
+                <h2>Pertemuan 14: Ujian Akhir</h2>
+                <p>Materi sedang disiapkan.</p>
+            </div>
+        </section>
+
+    </main>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

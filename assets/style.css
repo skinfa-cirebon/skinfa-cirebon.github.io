@@ -1,0 +1,360 @@
+/* ==============================
+           1. CSS Variables & Reset
+           ============================== */
+:root {
+    --primary-light: #01C8FF;
+    --primary-dark: #02569B;
+    --secondary: #2196F3;
+    --bg-body: #f4f7f6;
+    --bg-sidebar: #ffffff;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --white: #ffffff;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    display: flex;
+    /* Untuk layout sidebar */
+    min-height: 100vh;
+}
+
+/* ==============================
+           2. Sidebar Navigation
+           ============================== */
+.sidebar {
+    width: 260px;
+    background-color: var(--bg-sidebar);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e0e0e0;
+    position: fixed;
+    height: 100vh;
+    z-index: 100;
+
+    /* TAMBAHKAN DUA BARIS INI */
+    overflow-y: auto;
+    /* Mengizinkan scroll vertikal */
+    scrollbar-width: thin;
+    /* Membuat scrollbar lebih tipis (untuk Firefox) */
+}
+
+/* OPSIONAL: Mempercantik tampilan scrollbar di Chrome, Edge, dan Safari */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-light);
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.brand span {
+    color: var(--primary-light);
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: var(--text-muted);
+    border-radius: 10px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link i {
+    margin-right: 15px;
+    font-size: 18px;
+    width: 20px;
+    /* Lebar ikon tetap */
+    text-align: center;
+}
+
+.nav-link:hover {
+    background-color: #e3f2fd;
+    color: var(--primary-dark);
+}
+
+/* State Aktif di Menu */
+.nav-item.active .nav-link {
+    background: linear-gradient(135deg, var(--primary-dark), var(--secondary));
+    color: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ==============================
+           3. Main Content Area
+           ============================== */
+.main-content {
+    margin-left: 260px;
+    /* Memberi ruang untuk sidebar */
+    flex: 1;
+    padding: 40px;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-weight: 700;
+    color: var(--text-main);
+    font-size: 28px;
+}
+
+header p {
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+/* Section visibility */
+section {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+section.active-section {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==============================
+           4. Card Styles (Grid Utama)
+           ============================== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.module-card {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    cursor: pointer;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.module-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-light);
+}
+
+/* Efek hiasan di kartu */
+.module-card::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(1, 200, 255, 0.1), rgba(33, 150, 243, 0.1));
+    border-radius: 50%;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Warna spesifik ikon kartu */
+.p1-icon {
+    background: #E3F2FD;
+    color: #1976D2;
+}
+
+.p2-icon {
+    background: #E8F5E9;
+    color: #388E3C;
+}
+
+.p3-icon {
+    background: #FFFDE7;
+    color: #FBC02D;
+}
+
+.p4-icon {
+    background: #F3E5F5;
+    color: #7B1FA2;
+}
+.p5-icon {
+    background: #a8fa9f;
+    color: #1fa242;
+}
+
+.module-card h3 {
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.module-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ==============================
+           5. Content Styles (Materi)
+           ============================== */
+.content-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 20px;
+}
+
+.content-card h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+    border-bottom: 2px solid var(--primary-light);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.content-card h3 {
+    margin: 20px 0 10px 0;
+    font-weight: 600;
+}
+
+.content-card ul {
+    list-style-position: inside;
+    color: var(--text-muted);
+    margin-left: 5px;
+}
+
+.content-card li {
+    margin-bottom: 8px;
+}
+
+/* Styling Kode */
+code {
+    font-family: 'Fira Code', monospace;
+    background-color: #f1f1f1;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #d63031;
+}
+
+pre {
+    font-family: 'Fira Code', monospace;
+    background-color: #2d3436;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+    margin: 20px 0;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Button Back */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: var(--transition);
+}
+
+.btn-back:hover {
+    background-color: #eee;
+    color: var(--text-main);
+    transform: translateX(-3px);
+}
+
+/* ==============================
+           6. Responsive Breakpoints
+           ============================== */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 70px;
+        padding: 30px 10px;
+    }
+
+    .brand,
+    .nav-link span {
+        display: none;
+    }
+
+    .nav-link i {
+        margin-right: 0;
+        font-size: 20px;
+    }
+
+    .main-content {
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}
