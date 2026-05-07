@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatika Learning - Algoritma & Pemrograman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .sidebar-link.active { @apply bg-blue-600 text-white; }
+        scroll-behavior: smooth;
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Header -->
+    <header class="bg-blue-700 text-white p-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold italic"> <i class="fas fa-code mr-2"></i>Informatika Hub</h1>
+            <span class="text-sm bg-blue-800 px-3 py-1 rounded-full">Bab I: Algoritma & Pemrograman</span>
+        </div>
+    </header>
+
+    <div class="flex flex-col md:flex-row">
+        <!-- Sidebar Navigation -->
+        <aside class="w-full md:w-64 bg-white h-screen sticky top-16 overflow-y-auto border-r border-gray-200">
+            <nav class="p-4">
+                <div class="mb-6">
+                    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">1. Algoritma</p>
+                    <ul class="space-y-1">
+                        <li><a href="#naratif" class="block p-2 text-sm hover:bg-blue-50 rounded transition">a. Naratif</a></li>
+                        <li><a href="#pseudocode" class="block p-2 text-sm hover:bg-blue-50 rounded transition">b. Pseudocode</a></li>
+                        <li><a href="#flowchart" class="block p-2 text-sm hover:bg-blue-50 rounded transition">c. Flowchart</a></li>
+                        <li><a href="#bentuk-dasar" class="block p-2 text-sm hover:bg-blue-50 rounded transition">d. Bentuk Dasar</a></li>
+                    </ul>
+                </div>
+                <div class="mb-6">
+                    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">2. Pemrograman</p>
+                    <ul class="space-y-1">
+                        <li><a href="#tipe-data" class="block p-2 text-sm hover:bg-blue-50 rounded transition">a. Tipe Data</a></li>
+                        <li><a href="#variabel" class="block p-2 text-sm hover:bg-blue-50 rounded transition">b. Variabel</a></li>
+                        <li><a href="#operator" class="block p-2 text-sm hover:bg-blue-50 rounded transition">c. Operator</a></li>
+                        <li><a href="#sekuensial" class="block p-2 text-sm hover:bg-blue-50 rounded transition">d. Sekuensial</a></li>
+                        <li><a href="#percabangan" class="block p-2 text-sm hover:bg-blue-50 rounded transition">e. Percabangan</a></li>
+                        <li><a href="#perulangan" class="block p-2 text-sm hover:bg-blue-50 rounded transition">f. Perulangan</a></li>
+                        <li><a href="#strategi" class="block p-2 text-sm hover:bg-blue-50 rounded transition">g. Strategi Algoritma</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 md:p-12 max-w-4xl">
+            
+            <!-- Algoritma Section -->
+            <section id="algoritma" class="mb-20">
+                <h2 class="text-3xl font-bold mb-8 border-b-4 border-blue-500 pb-2">1. Algoritma</h2>
+                
+                <article id="naratif" class="mb-12">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-700">a. Naratif</h3>
+                    <p class="leading-relaxed">Penyajian algoritma dalam bahasa sehari-hari. Cocok untuk masalah sederhana yang tidak memerlukan simbol teknis.</p>
+                </article>
+
+                <article id="pseudocode" class="mb-12">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-700">b. Pseudocode</h3>
+                    <p class="mb-4">Kode semu yang mendekati bahasa pemrograman asli namun tetap mudah dibaca manusia.</p>
+                    <pre class="bg-gray-900 text-green-400 p-4 rounded-lg shadow-inner"><code>IF nilai > 75 THEN
+    PRINT "Lulus"
+ELSE
+    PRINT "Remedial"</code></pre>
+                </article>
+
+                <article id="flowchart" class="mb-12">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-700">c. Flowchart</h3>
+                    <p class="mb-4">Representasi grafis dari langkah-langkah algoritma menggunakan simbol standar (Oval, Jajar Genjang, Persegi Panjang, Belah Ketupat).</p>
+                    <div class="bg-blue-50 p-4 border-l-4 border-blue-400 italic">
+                        Visualisasi alur proses dari Start hingga Finish.
+                    </div>
+                </article>
+            </section>
+
+            <!-- Pemrograman Section -->
+            <section id="pemrograman" class="mb-20">
+                <h2 class="text-3xl font-bold mb-8 border-b-4 border-green-500 pb-2">2. Pemrograman</h2>
+
+                <article id="tipe-data" class="mb-12">
+                    <h3 class="text-xl font-semibold mb-3 text-green-700">a. Tipe Data</h3>
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li><strong>Integer:</strong> Bilangan bulat.</li>
+                        <li><strong>Float/Double:</strong> Bilangan desimal.</li>
+                        <li><strong>String:</strong> Kumpulan karakter/teks.</li>
+                        <li><strong>Boolean:</strong> True atau False.</li>
+                    </ul>
+                </article>
+
+                <article id="percabangan" class="mb-12">
+                    <h3 class="text-xl font-semibold mb-3 text-green-700">e. Percabangan</h3>
+                    <p class="mb-4">Struktur kendali untuk memilih eksekusi kode berdasarkan kondisi tertentu (If-Else, Switch Case).</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 border rounded shadow-sm">
+                            <h4 class="font-bold mb-2">Satu Kondisi</h4>
+                            <code class="text-pink-600 text-sm">if (lapar) { makan(); }</code>
+                        </div>
+                        <div class="bg-white p-4 border rounded shadow-sm">
+                            <h4 class="font-bold mb-2">Dua Kondisi</h4>
+                            <code class="text-pink-600 text-sm">if (hujan) { bawa_payung; } else { jalan_kaki; }</code>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="perulangan" class="mb-12">
+                    <h3 class="text-xl font-semibold mb-3 text-green-700">f. Perulangan (Looping)</h3>
+                    <p>Digunakan untuk menjalankan blok kode yang sama berkali-kali secara efisien. Contoh: <code>For</code>, <code>While</code>, dan <code>Do-While</code>.</p>
+                </article>
+            </section>
+
+            <!-- Footer Section -->
+            <footer class="mt-20 pt-8 border-t text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Informatika SMK - Materi Algoritma & Pemrograman</p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
